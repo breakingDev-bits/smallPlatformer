@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var platform = $BackGround/platform
 
-var player_scene = preload("res://player.tscn")
+var player_scene = preload("res://scenes/player.tscn")
 
 func _ready() -> void:
 	spawn_player(Vector2(100, 100))

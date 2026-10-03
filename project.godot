@@ -13,7 +13,7 @@ config_version=5
 config/name="Platformer"
 run/main_scene="uid://c1mos3voqrhfd"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://image/icon.svg"
 
 [display]
 

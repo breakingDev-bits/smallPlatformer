@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bh6wl3d3rr7ne"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 64
+
+[node name="GameOver" type="Control" unique_id=1056099241]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=747499319]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 284.0
+offset_right = 637.0
+offset_bottom = 322.0
+text = "Restart"
+
+[node name="Label" type="Label" parent="." unique_id=1082152746]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 165.0
+offset_right = 723.0
+offset_bottom = 253.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_g4v7s")
