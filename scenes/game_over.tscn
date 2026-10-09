@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bh6wl3d3rr7ne"]
 
+[ext_resource type="Script" uid="uid://djjta5e4gn4qj" path="res://scripts/nodeScript/game_over.gd" id="1_xeevv"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font_size = 64
 
@@ -10,20 +12,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xeevv")
 
 [node name="Button" type="Button" parent="." unique_id=747499319]
 layout_mode = 0
-offset_left = 443.0
-offset_top = 284.0
-offset_right = 637.0
-offset_bottom = 322.0
+offset_left = 473.0
+offset_top = 333.0
+offset_right = 690.0
+offset_bottom = 387.0
 text = "Restart"
 
 [node name="Label" type="Label" parent="." unique_id=1082152746]
 layout_mode = 0
-offset_left = 375.0
-offset_top = 165.0
-offset_right = 723.0
-offset_bottom = 253.0
+offset_left = 419.0
+offset_top = 223.0
+offset_right = 767.0
+offset_bottom = 311.0
 text = "Game Over"
 label_settings = SubResource("LabelSettings_g4v7s")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

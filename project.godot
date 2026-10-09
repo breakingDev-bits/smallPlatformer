@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Platformer"
-run/main_scene="uid://c1mos3voqrhfd"
+run/main_scene="uid://ka4p3mtomans"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://image/icon.svg"
+config/icon="res://image/players/icon.svg"
+
+[autoload]
+
+PauseManager="*uid://bjfhm5lnldd3j"
 
 [display]
 

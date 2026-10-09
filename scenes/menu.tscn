@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ka4p3mtomans"]
+
+[ext_resource type="Script" uid="uid://bjrksel45u1ed" path="res://scripts/nodeScript/ButtonsMenu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://bploab8md5x8c" path="res://image/Background/kudz_k7u4_210409.jpg" id="2_con2f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 48
+font_color = Color(1, 0.26999998, 0.26999998, 1)
+
+[node name="Menu" type="Node2D" unique_id=73804912]
+script = ExtResource("1_vjb58")
+
+[node name="KudzK7u4210409" type="Sprite2D" parent="." unique_id=622810685]
+position = Vector2(575.93744, 324.75)
+scale = Vector2(0.18152174, 0.18511668)
+texture = ExtResource("2_con2f")
+
+[node name="NameGame" type="Label" parent="." unique_id=1079092669]
+offset_left = 348.0
+offset_top = 218.0
+offset_right = 739.0
+offset_bottom = 285.0
+text = "Small platformer"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="StartGame" type="Button" parent="." unique_id=1279566977]
+offset_left = 395.0
+offset_top = 291.0
+offset_right = 704.0
+offset_bottom = 322.0
+text = "Play"
+
+[node name="ExitGame" type="Button" parent="." unique_id=468477391]
+offset_left = 411.0
+offset_top = 329.0
+offset_right = 686.0
+offset_bottom = 360.0
+text = "Exit from game
+"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_exit_game_pressed"]

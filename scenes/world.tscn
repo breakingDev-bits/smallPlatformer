@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1mos3voqrhfd"]
 
-[ext_resource type="Script" uid="uid://14rthy1lwrca" path="res://scripts/spawnPlayer.gd" id="1_4wyf3"]
-[ext_resource type="Texture2D" uid="uid://bploab8md5x8c" path="res://image/kudz_k7u4_210409.jpg" id="2_k0juu"]
+[ext_resource type="Script" uid="uid://14rthy1lwrca" path="res://scripts/nodeScript/enginePlayer.gd" id="1_4wyf3"]
+[ext_resource type="Texture2D" uid="uid://bploab8md5x8c" path="res://image/Background/kudz_k7u4_210409.jpg" id="2_k0juu"]
 [ext_resource type="PackedScene" uid="uid://bno6ewsfxd8r4" path="res://scenes/killer.tscn" id="3_71j4m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ettpe"]
@@ -14,7 +14,7 @@ size = Vector2(127.3345, 190.5)
 size = Vector2(14, 467)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(54.5, 515.50006)
+size = Vector2(15.25, 459.75006)
 
 [node name="world" type="Node2D" unique_id=1148691786]
 material = SubResource("CanvasItemMaterial_ettpe")
@@ -41,8 +41,10 @@ position = Vector2(-2, 238.50005)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BackGround/platform" unique_id=466727322]
-position = Vector2(1174, 265.00003)
+position = Vector2(1154.375, 237.12505)
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Killer" parent="." unique_id=693639346 instance=ExtResource("3_71j4m")]
+[node name="killers" type="Node2D" parent="." unique_id=1318845834]
+
+[node name="Killer1" parent="killers" unique_id=693639346 instance=ExtResource("3_71j4m")]
 position = Vector2(572, 278)

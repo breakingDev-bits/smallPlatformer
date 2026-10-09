@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b6yfv3w5v5i0r"]
+
+[ext_resource type="Script" uid="uid://bes0ukum6p5ce" path="res://scripts/multyPlayer.gd" id="1_4j30s"]
+
+[node name="MultiPlayerMenu" type="Control" unique_id=434722376]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4j30s")
+
+[node name="buttons" type="Control" parent="." unique_id=1723521900]
+anchors_preset = 0
+offset_left = 110.0
+offset_top = 94.0
+offset_right = 1045.0
+offset_bottom = 552.0
+
+[node name="createServer" type="Button" parent="buttons" unique_id=1328620032]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 227.0
+offset_right = 427.0
+offset_bottom = 280.0
+text = "Create Server"
+
+[node name="Connect to Server" type="Button" parent="buttons" unique_id=1155322146]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 227.0
+offset_right = 664.0
+offset_bottom = 280.0
+text = "Connect to Server"
+
+[connection signal="pressed" from="buttons/createServer" to="." method="_on_create_server_pressed"]
+[connection signal="pressed" from="buttons/Connect to Server" to="." method="_on_connect_to_server_pressed"]

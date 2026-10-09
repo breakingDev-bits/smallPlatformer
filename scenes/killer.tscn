@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://bno6ewsfxd8r4"]
 
 [ext_resource type="Script" uid="uid://cx28lx7q0vlcq" path="res://scripts/trap.gd" id="1_4tmj0"]
-[ext_resource type="Texture2D" uid="uid://b3rm00ud15sk0" path="res://image/cactus.png" id="2_ore10"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(79, 93)
 
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_4tmj0"]
+
 [node name="Killer" type="Area2D" unique_id=693639346]
 script = ExtResource("1_4tmj0")
 
-[node name="Cactus" type="Sprite2D" parent="." unique_id=1448259719]
+[node name="killer" type="Sprite2D" parent="." unique_id=1448259719]
 position = Vector2(187, 128.5)
 scale = Vector2(0.21666668, 0.23664124)
-texture = ExtResource("2_ore10")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1759148914]
 position = Vector2(186.5, 128.5)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1480603536]
+replication_config = SubResource("SceneReplicationConfig_4tmj0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
